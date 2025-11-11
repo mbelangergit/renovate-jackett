@@ -13,14 +13,3 @@ services:
     ports:
       - 9117:9117
     restart: unless-stopped
-
-  ddclient:
-    image: lscr.io/linuxserver/ddclient:v4.0.0-ls212
-    container_name: ddclient
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-    volumes:
-      - /path/to/ddclient/config:/config
-    restart: unless-stopped
